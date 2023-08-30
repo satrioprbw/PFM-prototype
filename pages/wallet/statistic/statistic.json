@@ -1,0 +1,19 @@
+{
+  "defaultTitle": "",
+  "allowsBounceVertical": "NO",
+  "transparentTitle": "auto",
+  "titleBarColor": "#262833",
+  "usingComponents": {
+    "header":"../../../components/wallet/header/header",
+    "icon": "antd-mini/es/Icon/index",
+    "card-dashboard":"/components/wallet/card-dashboard/card-dashboard",
+    "ring-wallet":"/components/wallet/ring-wallet/ring-wallet",
+    "list-wallet":"/components/wallet/list-wallet/list-wallet",
+    "line-wallet": "/components/wallet/line-wallet/line-wallet",
+    "card-container" :"/components/wallet/card-container/card-container",
+    "tabbar":"/components/wallet/tabbar/tabbar",
+    "card-stat":"/components/wallet/card-statistic/card-statistic",
+    "bar-wallet": "/components/wallet/bar-wallet/bar-wallet",
+    "tabbar-option":"/components/wallet/tabbar-option/tabbar-option"
+  }
+}

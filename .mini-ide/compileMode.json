@@ -1,0 +1,19 @@
+{
+  "modes": [
+    {
+      "title": "detail",
+      "page": "pages/tabBar/detail/detail",
+      "pageQuery": ""
+    },
+    {
+      "title": "histo",
+      "page": "pages/detailHisto/detailHisto",
+      "pageQuery": ""
+    },
+    {
+      "title": "stat",
+      "page": "pages/wallet/statistic/statistic",
+      "pageQuery": "stat=%7B%22current%22%3A%22SPENDING%22%7D"
+    }
+  ]
+}

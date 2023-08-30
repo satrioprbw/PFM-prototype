@@ -1,0 +1,9 @@
+<view class="comp-bar-chart">
+  <canvas     
+  id="comp-bar-chart-{{$id}}"
+  height="{{height}}"
+  width="{{width}}"
+  onTouchStart="touchStart"
+  onTouchMove="touchMove"
+  onTouchEnd="touchEnd"/>
+</view>

@@ -1,0 +1,6 @@
+.container-tabbar-option{
+  height: 100rpx;
+  width: 100%;
+  background-color: aqua;
+  border-radius: 20rpx;
+}

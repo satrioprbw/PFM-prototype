@@ -1,0 +1,113 @@
+<header title="Home" />
+<view class="tabbar-header">
+  <block a:for="{{ tabbarItem }}">
+    <view class="tabbar-item center-item {{activeTab===item? 'tabbar-active':''}}" onTap="switchTabbar" data-name={{item}}>
+      <text style="color:white;font-weight:600;font-size:30rpx"> {{item}}</text>
+    </view>
+  </block>
+</view>
+<!-- accounts -->
+  <!-- header account -->
+<view a:if="{{ activeTab==='ACCOUNTS' }}">
+  <view class="header-account center-item">
+    <view class="title-header-account">
+      <view style="margin:5rpx">
+        <text style="font-size:37rpx">List of account</text>
+      </view>
+      <view style="margin:5rpx">
+        <view class="center-item" style="height:70rpx;width:75rpx;border:1rpx solid #DDE6ED;border-radius:25rpx">
+          <icon style="color:blue;font-size:50rpx;" type="SetOutline"/>
+        </view>
+      </view>
+    </view>
+    <view class="item-header-account">
+      <block a:for="{{ listAcount }}" >
+        <view class="center-item" style="flex-direction:column;align-items:self-start;border-radius:15rpx;width:345rpx;height:100rpx;background-color:{{item.color}}">
+          <text style="padding:5rpx 20rpx;color:white">{{item.name}}</text>
+          <text style="padding:5rpx 20rpx;color:white">{{item.value.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}}</text>
+        </view>
+      </block>
+      <view onTap="" style="flex-direction:column;align-items:self-start;border-radius:15rpx;width:345rpx;height:100rpx;">
+        <view  style="display:flex;height:75rpx;padding:10rpx;border:5rpx solid blue;border-radius:15rpx">
+          <view class="center-item" style="flex:4">
+            <text style="color:blue;font-weight:600">ADD ACCOUNT</text>
+          </view>
+          <view class="center-item" style="flex:1">
+            <view class="center-item" style="width:40rpx;height:40rpx;border-radius:50%; background-color:blue">
+              <icon style="color:white;font-weight:800" type="AddOutline"  />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="margin-top:25rpx;">
+      <text style="color:grey; font-weight:600; margin-right:5rpx">
+        TIP
+      </text>
+      <text style="font-weight:400;color:grey">
+        : long thouch on accaount to enable multi select 
+      </text>
+    </view>
+    <view style="height:100rpx"/>
+  </view>
+    <!-- main account  -->
+  <view class="container-account">
+    <card-dashboard title="Expenses Structure" subTitle="30 Days" onChange="pindahPage" current="SPENDING">
+      <view style="width:100%;display:flex">
+        <view style="padding:10rpx 30rpx;display:flex;flex-direction:column">
+          <text style="font-size:40rpx;font-weight:600">{{dataAllCategory.totalValue.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}}</text>
+        </view>
+        <view style="height:100rpx;width:100%;display:flex" class="center-item">
+          <view a:if="{{ buttonSeeAll }}" onTap="seeAllData" style="padding:10rpx 20rpx;box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); border-radius:10rpx;">
+            <text>back</text>
+          </view>
+          <view a:if="{{ detailStatus && !buttonSeeAll}}" onTap="findDetailData" style="padding:10rpx 20rpx;box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); border-radius:10rpx;">
+            <text>Go Deeper</text>
+          </view>
+        </view>
+      </view>
+      <view class="center-item" style="height:500rpx;width:100%;margin-bottom:20rpx">
+        <ring-wallet ringData="{{ringData}}" guideTitle="{{guideTitle}}" guideMain="{{guideMain}}">
+          <view style="height:250rpx;width:250rpx;background-color:blue;z-index:1000">
+          </view>
+        </ring-wallet>
+      </view>
+    </card-dashboard>
+    <card-dashboard title="Last Record Overview" subTitle="a week" onChange="pindahPage" >
+      <block a:for="{{ allDataForList }}" a:for-index="idx">
+        <list-wallet item="{{item}}"/>
+        <view class="center-item" a:if="{{ idx !== allDataForList.length-1 }}">
+          <view style="width:660rpx;border-bottom:3rpx solid #BDBDD7;"/>
+        </view>
+      </block>
+    </card-dashboard> 
+    <card-dashboard title="Balancce Trend" onChange="pindahPage" current="BALANCE">
+      <view style="width:100%;display:flex">
+        <view style="padding:10rpx 30rpx;display:flex;flex-direction:column;width:100%">
+          <view style="display:flex;justify-content:space-between;width:100%;halign-items:end">
+            <view style="display:flex;flex-direction:column;align-items:start;justify-content:end">
+              <text style="color:grey;margin-bottom:10rpx">Today</text>
+              <text style="font-size:40rpx;font-weight:600">{{dataAllCategory.totalValue.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}}</text>
+            </view>
+            <view style="display:flex;flex-direction:column;align-items:center;justify-content:end">
+              <text style="color:grey;margin-bottom:10rpx;font-size:22rpx">vs past period</text>
+              <text style="font-size:35rpx;color:{{percentWPrevData>0?'green':'red'}}">{{percentWPrevData}}%</text>
+            </view>
+          </view>
+          <view class="box-line-chart">
+            <line-wallet lineData="{{alldataPerDate}}" />
+          </view>
+        </view> 
+      </view>
+    </card-dashboard>
+    <card-container style="height:100rpx;margin-bottom:200rpx" className="center-item" >
+      <button size="default" style="background-color:white;background:white" type="text">
+        <text style="color:blue;font-weight:550;padding:0rpx 20rpx">ADD MORE CARD</text>
+      </button>
+    </card-container>
+  </view>
+</view>
+
+<view class="button-plus center-item" onTap="pindahPage">
+  <icon style="color:white;font-weight:800;font-size:50rpx" type="AddOutline"  />
+</view>

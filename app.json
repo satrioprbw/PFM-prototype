@@ -1,0 +1,16 @@
+{
+  "subPackageBuildType": "shared",
+  "pages": [
+    "pages/wallet/dashboard/dashboard",
+    "pages/wallet/statistic/statistic",
+    "pages/index/index",
+    "pages/wallet/record/record"
+  ],
+  "window": {
+    "defaultTitle": "wallet",
+    "backgroundColor": "white",
+    "pullRefresh": false,
+    "allowsBounceVertical": "YES",
+    "titleBarColor": "white"
+  }
+}

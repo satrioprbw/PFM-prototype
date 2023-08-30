@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "icon": "antd-mini/es/Icon/index",
+    "card-container" :"/components/wallet/card-container/card-container"
+  }
+}

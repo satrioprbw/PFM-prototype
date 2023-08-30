@@ -1,0 +1,24 @@
+<card-container>
+  <view class="cd-header">
+    <view class="cd-item-header">
+      <view class="center-item"> 
+        <text style="font-size:35rpx">{{title}}</text>
+      </view>
+      <view class="center-item">
+        <icon style="font-size:60rpx;font-weight:800;color:grey" type="MoreOutline" />
+      </view>
+    </view>
+  </view>
+  <view style="padding:10rpx 30rpx">
+    <text style="font-weight:400;color:grey">{{subTitle}}</text>
+  </view>
+  <slot/>
+  <view class="center-item" >
+    <view style="width:660rpx;border-bottom:3rpx solid #BDBDD7;"/>
+  </view>
+  <view class="cd-footer center-item">
+    <button style="height:80rpx;background-color:white" onTap="onChange" class="center-item" type="text" data-current={{current}}>
+      <text style="font-weight:550;color:blue;padding:0rpx 20rpx"> SHOW MORE</text>
+    </button>
+  </view>
+</card-container>

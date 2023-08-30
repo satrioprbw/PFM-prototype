@@ -1,0 +1,19 @@
+<card-container>
+  <view class="header-stat-card">
+    <view style="display:flex;flex-direction:column">
+      <text style="font-size:35rpx">{{title}}</text>
+      <text style="color:grey;margin-top:10rpx;font-size:25rpx">{{subTitle}}</text>
+    </view>
+    <view class="center-item">
+      <icon style="color:grey;font-size:50rpx" type="TravelOutline"  />
+    </view>
+  </view>
+  <view class="center-item" style="width:100%">
+    <view style="border-bottom:5rpx solid #C2DEDC; width:100%;margin-bottom:10rpx"/>
+  </view>
+  <view style="width:calc(100%-50rpx) ;height:50rpx;justify-content:start;padding:0rpx 25rpx" class="center-item" >
+    <text style="font-size:25rpx;color:grey">{{time}}</text>
+  </view>
+  <slot/>
+
+</card-container>

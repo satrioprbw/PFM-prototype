@@ -1,0 +1,26 @@
+.tabbar-container{
+  background-color: #03C988;
+  display: flex;
+  width: 100%;
+  height: 90rpx;
+}
+.tabbar-item{
+  height: 70rpx;
+  border-bottom: 10rpx solid #03C988;
+  border-top: 10rpx solid #03C988;
+  padding: 0rpx 20rpx;
+}
+
+.tabbar-item text{
+  white-space:nowrap;
+  color: rgb(224, 223, 223);
+  font-size: 25rpx;
+  font-weight: 400;
+}
+.tabbar-active{
+  border-bottom: 12rpx solid white;
+}
+.tabbar-active text{
+  color: white;
+
+}

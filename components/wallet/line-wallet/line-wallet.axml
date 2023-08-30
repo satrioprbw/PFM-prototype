@@ -1,0 +1,9 @@
+<view class="comp-line-chart">
+  <canvas     
+  id="comp-line-chart-{{$id}}"
+  height="{{height}}"
+  width="{{width}}"
+  onTouchStart="touchStart"
+  onTouchMove="touchMove"
+  onTouchEnd="touchEnd"/>
+</view>

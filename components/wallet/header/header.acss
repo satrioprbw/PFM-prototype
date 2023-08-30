@@ -1,0 +1,6 @@
+.container-header{
+  height: 100rpx;
+  width: 100%;
+  background-color: #03C988;
+  display: flex;
+}

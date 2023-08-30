@@ -1,0 +1,15 @@
+<view style="height:70rpx; background-color:#03C988;"/>
+<view class="container-header">
+  <view class="center-item" style="flex:1" onTap="">
+    <icon style="color:white;font-size:45rpx" type="UnorderedListOutline" />
+  </view>
+  <view class="center-item" style="flex:3;justify-content:start">
+    <text style="margin-left:20rpx; font-weight:500; font-size:40rpx; color:white">
+      {{title}}
+    </text>
+  </view>
+  <view class="center-item" style="flex:1">
+    <icon style="color:white;font-size:45rpx" type="BellOutline" />
+  </view>
+  <view style="flex:1"/>
+</view>

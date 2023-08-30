@@ -1,0 +1,11 @@
+.header-stat-card{
+  display: flex;
+  padding: 25rpx;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.footer-stat-card{
+  height: 90rpx;  
+  padding: 10rpx 0rpx;
+}

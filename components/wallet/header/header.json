@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "icon": "antd-mini/es/Icon/index"
+  }
+}

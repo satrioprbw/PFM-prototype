@@ -1,0 +1,7 @@
+<scroll-view class="tabbar-container"  scroll-x="{{true}}" >
+  <block a:for="{{ items }}">
+    <view class="tabbar-item center-item {{current === item.title?'tabbar-active':''}}" onTap="onChange" data-newCurrent="{{item.title}}">
+     <text > {{item.title}}</text>   
+    </view>
+  </block>
+</scroll-view>

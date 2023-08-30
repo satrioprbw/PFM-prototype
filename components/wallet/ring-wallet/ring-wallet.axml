@@ -1,0 +1,10 @@
+<view class="comp-ring-chart" >
+  <canvas     
+  id="comp-ring-chart-{{$id}}"
+  height="{{height}}"
+  width="{{width}}"
+  onTouchStart="touchStart"
+  onTouchMove="touchMove"
+  onTouchEnd="touchEnd">
+</canvas>
+</view>

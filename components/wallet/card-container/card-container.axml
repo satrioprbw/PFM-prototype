@@ -1,0 +1,3 @@
+<view class="card-container {{className}}" style="{{style}}">
+  <slot/>
+</view>

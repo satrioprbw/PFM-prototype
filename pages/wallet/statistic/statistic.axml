@@ -1,0 +1,62 @@
+<header title="Statistic" />
+<tabbar items="{{tabbarList}}" onChange="changeTabbar" current="{{current}}" />
+<!-- spending page  -->
+<view class="statistic-main" a:if="{{ current==='SPENDING' }}">
+  <!-- <card-stat title="Spending By Categories or Label" subTitle="Where does my money go?" time="Last 7 Days">
+    <view style="width:100%;display:flex">
+      <view style="padding:10rpx 30rpx;display:flex;flex-direction:column">
+        <text style="font-size:40rpx;font-weight:600">{{dataAllCategory.totalValue.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}}</text>
+      </view>
+      <view style="height:100rpx;width:100%;display:flex" class="center-item">
+        <view a:if="{{ buttonSeeAll }}" onTap="seeAllData" style="padding:10rpx 20rpx;box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); border-radius:10rpx;">
+          <text>back</text>
+        </view>
+        <view a:if="{{ detailStatus && !buttonSeeAll}}" onTap="findDetailData" style="padding:10rpx 20rpx;box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); border-radius:10rpx;">
+          <text>Go Deeper</text>
+        </view>
+      </view>
+    </view>
+    <view class="center-item" style="height:500rpx;width:100%;margin-bottom:20rpx">
+      <ring-wallet ringData="{{ringData}}" guideTitle="{{guideTitle}}" guideMain="{{guideMain}}">
+        <view style="height:250rpx;width:250rpx;background-color:blue;z-index:1000">
+        </view>
+      </ring-wallet>
+    </view>
+    <view>
+      <view style="padding:0rpx 30rpx">
+        <text style="color:grey;font-weight:600">Trend</text>
+      </view>
+      <view style="height:250rpx;width:100%;background-color:white"> 
+        <bar-wallet barData="{{barData}}"/>
+      </view>
+    </view>
+    <view>
+      <view style="padding:0rpx 30rpx">
+        <text style="color:grey;font-weight:600">Top 5 Expence</text>
+      </view>
+      <view style="padding:0rpx 30rpx"> 
+        <block a:for="{{ top5List }}"  a:for-index="idx">
+          <list-wallet item="{{item}}"/>
+          <view class="center-item" >
+            <view style="width:660rpx;border-bottom:3rpx solid #BDBDD7;"/>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="cd-footer center-item">
+      <button style="height:80rpx;background-color:white" onTap="onChange" class="center-item" type="text" data-current={{current}}>
+        <text style="font-weight:550;color:blue;padding:0rpx 20rpx"> SHOW MORE</text>
+      </button>
+    </view>
+  </card-stat> -->
+  <card-stat title="The Nature Of Spending " subTitle="How much i pay, or ijust want to spend?" time="Last 7 Days">
+    <view style="width:100%;display:flex">
+      <view style="padding:10rpx 30rpx;display:flex;flex-direction:column">
+        <text style="font-size:40rpx;font-weight:600">{{dataAllCategory.totalValue.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}}</text>
+      </view>
+    </view>
+    <view class="center-item" style="width:calc(100%-30rpx);padding:30rpx">
+        <tabbar-option list="{{listForTabbar}}" />
+    </view>
+  </card-stat>
+</view>

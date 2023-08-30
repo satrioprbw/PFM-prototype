@@ -1,0 +1,6 @@
+page {
+  background: #CBE4DE;
+}
+.statistic-main{
+  padding:30rpx
+}

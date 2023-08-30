@@ -1,0 +1,6 @@
+.container-list{
+  height: 100rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
